@@ -11,11 +11,11 @@ public class InputView {
 	public static String[] inputOperation() {
 		String operation = SCANNER.nextLine();
 		String[] splitOperation = operation.split(" ");
-		try{
+		try {
 			Validator.validateOperation(splitOperation);
-		} catch (NotSupportedOperationException e){
+		} catch (NotSupportedOperationException e) {
 			OutputView.printMessage(e.getMessage());
-			splitOperation= inputOperation();
+			splitOperation = inputOperation();
 		}
 		return splitOperation;
 	}

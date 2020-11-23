@@ -1,9 +1,8 @@
 package controller;
 
+import domain.Board;
 import view.InputView;
 import view.OutputView;
-
-import java.util.Arrays;
 
 public class ChessGame {
 	public static final String OPERATION_START = "start";
@@ -11,8 +10,9 @@ public class ChessGame {
 	public static final String OPERATION_MOVE = "move";
 
 	public static void play() {
+		Board board = new Board();
 		OutputView.printGuideMessage();
 		String[] splitOperation = InputView.inputOperation();
-		System.out.println(Arrays.toString(splitOperation));
+
 	}
 }
