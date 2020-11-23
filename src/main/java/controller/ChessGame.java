@@ -12,7 +12,6 @@ public class ChessGame {
 	public static void play() {
 		Board board = new Board();
 		OutputView.printGuideMessage();
-		String[] splitOperation = InputView.inputOperation();
-
+		InputView.inputOperation();
 	}
 }
