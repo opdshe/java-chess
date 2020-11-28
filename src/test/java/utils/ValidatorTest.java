@@ -1,6 +1,6 @@
 package utils;
 
-import exceptions.NotSupportedOperationException;
+import chess.exceptions.NotSupportedOperationException;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
