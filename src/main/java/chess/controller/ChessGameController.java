@@ -8,16 +8,16 @@ import chess.view.OutputView;
 public class ChessGameController {
     public static void play() {
         OutputView.printGreetingMessage();
-        inputCommand();
+        getCommand();
     }
 
-    private static Command inputCommand() {
+    private static Command getCommand() {
         Command command = null;
         try {
             command = CommandMapper.find(InputView.getCommand());
         } catch (Exception e) {
             OutputView.printMessageAndNewLine(e.getMessage());
-            inputCommand();
+            getCommand();
         }
         return command;
     }
